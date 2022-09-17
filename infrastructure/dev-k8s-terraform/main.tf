@@ -152,7 +152,7 @@ resource "aws_instance" "kube-master" {
 
 resource "aws_instance" "worker-1" {
     ami = "ami-0888c389af05d881a"
-    instance_type = "t3a.medium"
+    instance_type = "t2.micro"
         iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.matt-kube-worker-sg.id, aws_security_group.matt-kube-mutual-sg.id]
     key_name = "mattkey"
@@ -170,7 +170,7 @@ resource "aws_instance" "worker-1" {
 
 resource "aws_instance" "worker-2" {
     ami = "ami-0888c389af05d881a"
-    instance_type = "t2.medium"
+    instance_type = "t2.micro"
     iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.matt-kube-worker-sg.id, aws_security_group.matt-kube-mutual-sg.id]
     key_name = "mattkey"

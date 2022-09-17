@@ -133,7 +133,7 @@ resource "aws_security_group" "matt-kube-master-sg" {
 }
 
 resource "aws_instance" "kube-master" {
-    ami = "ami-0888c389af05d881a"
+    ami = "ami-08d4ac5b634553e16"
     instance_type = "t2.micro"
     iam_instance_profile = module.iam.master_profile_name
     vpc_security_group_ids = [aws_security_group.matt-kube-master-sg.id, aws_security_group.matt-kube-mutual-sg.id]
@@ -151,7 +151,7 @@ resource "aws_instance" "kube-master" {
 }
 
 resource "aws_instance" "worker-1" {
-    ami = "ami-0888c389af05d881a"
+    ami = "ami-08d4ac5b634553e16"
     instance_type = "t2.micro"
         iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.matt-kube-worker-sg.id, aws_security_group.matt-kube-mutual-sg.id]
@@ -169,7 +169,7 @@ resource "aws_instance" "worker-1" {
 }
 
 resource "aws_instance" "worker-2" {
-    ami = "ami-0888c389af05d881a"
+    ami = "ami-08d4ac5b634553e16"
     instance_type = "t2.micro"
     iam_instance_profile = module.iam.worker_profile_name
     vpc_security_group_ids = [aws_security_group.matt-kube-worker-sg.id, aws_security_group.matt-kube-mutual-sg.id]

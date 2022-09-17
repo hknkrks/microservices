@@ -1716,7 +1716,7 @@ git push --set-upstream origin feature/msp-16
   * Add `*/feature/msp-16`branch to `Branches to build`
   * Select `Add timestamps to the Console Output` under `Build Environment`
   * Click `Add build step` under `Build` and select `Execute Shell`
-  * Write below script into the `Command` for checking the environment tools and versions with following script.
+  * Write below script into the `Command` for checking the environment tools and versions with following script..
 
 ```bash
 echo $PATH
